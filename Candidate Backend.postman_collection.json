@@ -1,0 +1,222 @@
+{
+	"info": {
+		"_postman_id": "33d2e050-a09f-47b6-b62f-a8b41ef42792",
+		"name": "Candidate Backend",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "decryptToken",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"token\": \"ejTTzCy8oajuW7veDyTxNZZVfgIMQ+5YA6svEceFeBtOSZOb7AEEZoT8oOo6Rk30dsZB6wIde/Z0EP24vwI8I8ffOm6Yq9yzVd4lrpKSLuKOred0xdc/2dACgsyVxZpg8BiUkvTfIXLYnq1t3KAxFOmpUC2VdD1qT/Uiw2uABkk=\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3003/des",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3003",
+					"path": [
+						"des"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/v1/auth/register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"fullName\": \"Tyrion Lannister\",\n    \"username\": \"TL\",\n    \"password\": \"1234\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3003/v1/auth/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3003",
+					"path": [
+						"v1",
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/v1/auth/signin",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"TL\",\n    \"password\": \"1234\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3003/v1/auth/signin",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3003",
+					"path": [
+						"v1",
+						"auth",
+						"signin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/v1/services",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3003/v1/services",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3003",
+					"path": [
+						"v1",
+						"services"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/v1/services/:serviceID",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3003/v1/services/89c6f3b4-4f0f-11ed-bdc3-0242ac120002",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3003",
+					"path": [
+						"v1",
+						"services",
+						"89c6f3b4-4f0f-11ed-bdc3-0242ac120002"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/v1/services/:serviceID/booking",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"token\": \"ejTTzCy8oajuW7veDyTxNZZVfgIMQ+5YA6svEceFeBtOSZOb7AEEZoT8oOo6Rk30XiwcV8gjKfTIye2FRO+uoxlQbWcoLchc8bayHZlrdI660LguC82rh+Q7YnJT6qTZ+EtQyba71qqEDMc8SE56CXGPnQiESaBA/auiXgxLKDg=\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3003/v1/services/3/booking",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3003",
+					"path": [
+						"v1",
+						"services",
+						"3",
+						"booking"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/v1/orders",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"token\": \"ejTTzCy8oajuW7veDyTxNZZVfgIMQ+5YA6svEceFeBtOSZOb7AEEZoT8oOo6Rk30dsZB6wIde/Z0EP24vwI8I8ffOm6Yq9yzVd4lrpKSLuKOred0xdc/2dACgsyVxZpg8BiUkvTfIXLYnq1t3KAxFOmpUC2VdD1qT/Uiw2uABkk=\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3003/v1/orders",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3003",
+					"path": [
+						"v1",
+						"orders"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
