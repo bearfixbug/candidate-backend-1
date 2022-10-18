@@ -7,6 +7,11 @@
   - Open terminal in project
   - Use command "npm install" for install package
   - Use command "npm run dev" for run this project
+  - Create file .env and replace this 
+  ```
+  KEY=9f60f29a3b4d4cd5940e14202b8a79f7
+  IV=7d8bf3f84f0d11ed
+  ```
 
 # Script to Create Database and Table
 > Recommend Database name : candidate
