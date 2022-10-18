@@ -7,9 +7,6 @@ const crypto = require('crypto');
 const CryptoJS = require('crypto-js');
 const jwt = require('jsonwebtoken');
 const env = require('dotenv');
-// const { forEach } = require('lodash');
-
-app.use(express.static(__dirname + "/"));
 
 app.use(express.static(__dirname + "/"));
 app.use(bodyParser.json());
